@@ -36,7 +36,7 @@ def getPortList(port_range):
     else:
         start, end = port_range.split("-")
         return list(range(int(start), int(end) + 1))
-        
+# For Scanning the ports 
 def scan_port(target, port, timeout=1.0):
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
@@ -45,6 +45,7 @@ def scan_port(target, port, timeout=1.0):
             if result == 0:
                 service = lookup_port(port)
                 version_info = ""
+                # For getting service version of services HTTP, Telnet, MySQL, Redis,HTTPS
                 if port in [80,8080,443,22,3306,23,6379]:
                     version_info = detect_service_version(sock,target,port)
                 return (port, service,version_info)
@@ -130,6 +131,7 @@ def main():
         for line in results_output:
             print(line)
         
+        # Write the results to the output file
         if output_file:
             try:
                 with open(output_file, 'w') as f:
