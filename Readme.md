@@ -9,8 +9,7 @@ Week 5:
     Scapy
 
 arpscan.py :
-
-    I have used the scapy module again and so it requires root user privileges. The intent of the program is to identify the IP addresses and the MAC addresses of the systems in your local network.
+I have used the scapy module again and so it requires root user privileges. The intent of the program is to identify the IP addresses and the MAC addresses of the systems in your local network.
 
 multithreaded_port_scanner.py :
 
