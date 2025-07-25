@@ -28,6 +28,10 @@ multithreaded_port_scanner.py :
 cvelookup.py :
      I didn't parse any service versions in port scanner . So, after running the port scanner you can input the service and version and get the CVE  identified with description and CVE_ID.
 
+subdomaindiscovery.py:
+After identifying the ports and services , we can look up for the subdomain through this tool.
+
+
 
 
 
