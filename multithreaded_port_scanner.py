@@ -115,7 +115,6 @@ def main():
         results_output.append(f"Ports Scanned: {len(port_range)}")
         results_output.append(f"Timeout: {timeout}s")
         results_output.append(f"Threads: {num_threads}")
-        results_output.append("-" * 20)
 
         if results:
             results_output.append("\n[*] Open Ports:")
