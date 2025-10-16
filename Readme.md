@@ -131,22 +131,3 @@ pip install scapy
 ```
 
 Run scripts from the command line per examples above.
-
-## License
-
-This project is for educational purposes and experimentation in network reconnaissance.
-
-***
-
-**Contact and Issues:**
-Raise issues via GitHub, or contact the repository owner for support.
-
-***
-
-This README offers clear installation, usage, and functional outlines to help users and reviewers understand and run your project.
-<span style="display:none">[^1]</span>
-
-<div align="center">⁂</div>
-
-[^1]: https://github.com/soundhar07/Own-Reconnaissance-Tools
-
