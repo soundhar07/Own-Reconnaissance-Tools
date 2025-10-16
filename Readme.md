@@ -1,52 +1,160 @@
-Week 5:
-    In Week 5 Folder, I have two programs one is a basic port scanner which works on TCP Full connect portscan.py and next one is TCP SYN connect based port 
-    Scanner which uses the Scapy library to build IP packets and TCP segements. Scapy requires the usage of sudo along with your program.
-    
-    Usage: 
-    python portscan.py , sudo tcpsyn.py
+# [https://github.com/soundhar07/Own-Reconnaissance-Tools](https://github.com/soundhar07/Own-Reconnaissance-Tools)
 
-    Libraries required:
-    Scapy
+Go through this github and give me a proper Readme.md file with project description and each functionality
 
-arpscan.py :
-I have used the scapy module again and so it requires root user privileges. The intent of the program is to identify the IP addresses and the MAC addresses of the systems in your local network.
+Here’s a **complete README.md** for your repository, combining all project details, description, and the functionalities:
 
-multithreaded_port_scanner.py :
+***
 
-    In this I have implemented the multi threading based port scanner with different options explained below. I have limited the threads to 100 and not more than that as it might be sudden huge burst of traffic and it will also miss many port connections.It also uses the detectservices module to does the banner grabbing for famous protocols like HTTP,HTTPS,SSH,TELNET,MySQL and Redis.
+# Own-Reconnaissance-Tools
 
-    Options:
-    -a	Required. This is to give the Target IP address or domain name which will be later resolved.
-    -p	Optional. This is to mention the port range or even single port. If nothing is given, it performs the basic port scanning of top 1000 most common ports. It takes port range as argument like 1-100, or all .
-    -T	Timeout for the TCP packets.
-    -n	Number of threads (default value is 10 and it can go up to 100)
-    -o	To save the results to the output file.
-    
-    Usage:
-    python multithreaded_port_scanner.py - a [hostname or IP address] - p [all or 1-10000 ] -n [NUMBER OF THREADS] -T[TCP_TIMEOUT] -o[OUTPUT_FILE]
+An advanced toolkit for network reconnaissance and scanning, developed as part of my COMP6841 Project. This project features multiple Python utilities for port scanning, banner grabbing, vulnerability lookup, ARP scanning, and subdomain discovery. Designed for hands-on learning and practical use in network security assessments.
 
-cvelookup.py :
-     I didn't parse any service versions in port scanner . So, after running the port scanner you can input the service and version and get the CVE  identified with description and CVE_ID.
+## Features \& Tools
 
-subdomaindiscovery.py:
-After identifying the ports and services , we can look up for the subdomain through this tool.
+### 1. TCP Full Connect Port Scanner (`portscan.py`)
+
+- **Description:**
+Scans open ports on a target system using standard TCP "full connect" logic.
+- **Usage:**
+
+```bash
+python portscan.py
+```
+
+- **Notes:**
+No root privileges required.
 
 
+### 2. TCP SYN Port Scanner (`tcpsyn.py`)
+
+- **Description:**
+Performs stealthy TCP SYN scans by crafting packets using Scapy.
+- **Usage:**
+
+```bash
+sudo python tcpsyn.py
+```
+
+- **Requirements:**
+    - Scapy library
+    - Root privileges
 
 
+### 3. ARP Network Scanner (`arpscan.py`)
+
+- **Description:**
+Detects IP and MAC addresses of devices in your local network using ARP requests and Scapy.
+- **Usage:**
+
+```bash
+sudo python arpscan.py
+```
+
+- **Requirements:**
+    - Scapy library
+    - Root privileges
 
 
+### 4. Multithreaded Port Scanner (`multithreaded_port_scanner.py`)
+
+- **Description:**
+A multithreaded scanner supporting up to 100 threads for rapid scanning of port ranges or top N ports. Integrates banner grabbing for key protocols (HTTP, HTTPS, SSH, TELNET, MySQL, Redis) using the `detectservices` module.
+- **Options:**
+    - `-a`: Target IP address or domain name **(required)**
+    - `-p`: Port range (e.g., `1-10000`), single port, `all` for top 1000 ports (optional)
+    - `-T`: TCP timeout value
+    - `-n`: Number of threads (default 10; up to 100)
+    - `-o`: Output file to save scan results
+- **Usage:**
+
+```bash
+python multithreaded_port_scanner.py -a [target] -p [all or 1-10000] -n [threads] -T [timeout] -o [output]
+```
 
 
+### 5. Banner Grabbing (`detectservices.py`)
+
+- **Description:**
+A supporting module for banner grabbing to identify services and versions on scanned ports, used by the multithreaded scanner.
 
 
+### 6. CVE Lookup (`cvelookup.py`)
+
+- **Description:**
+Input a service name and its version to identify corresponding CVEs and fetch vulnerability details and CVE IDs.
+- **Usage:**
+
+```bash
+python cvelookup.py
+```
 
 
+### 7. Subdomain Discovery (`subdomaindiscovery.py`)
+
+- **Description:**
+After service \& port enumeration, leverage this tool to discover subdomains of target systems.
+- **Usage:**
+
+```bash
+python subdomaindiscovery.py
+```
 
 
+## Project Structure
+
+```
+Own-Reconnaissance-Tools/
+├── Week 5/
+│   ├── portscan.py
+│   ├── tcpsyn.py
+├── arpscan.py
+├── cvelookup.py
+├── detectservices.py
+├── multithreaded_port_scanner.py
+├── subdomaindiscovery.py
+├── nmap_default_ports.txt
+├── top_tcp_ports.txt
+├── wordlist.txt
+├── nvdcve-1.1-recent.json
+├── Project Report.pdf
+├── Readme.md
+```
 
 
+## Requirements
+
+- Python 3.x
+- Scapy
+- Recommended: Run network and SYN scan tools with root privileges for packet crafting
 
 
+## How to Run
 
+See individual script usage above.
+Install `Scapy` with:
+
+```bash
+pip install scapy
+```
+
+Run scripts from the command line per examples above.
+
+## License
+
+This project is for educational purposes and experimentation in network reconnaissance.
+
+***
+
+**Contact and Issues:**
+Raise issues via GitHub, or contact the repository owner for support.
+
+***
+
+This README offers clear installation, usage, and functional outlines to help users and reviewers understand and run your project.
+<span style="display:none">[^1]</span>
+
+<div align="center">⁂</div>
+
+[^1]: https://github.com/soundhar07/Own-Reconnaissance-Tools
 
