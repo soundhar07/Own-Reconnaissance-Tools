@@ -1,11 +1,3 @@
-# [https://github.com/soundhar07/Own-Reconnaissance-Tools](https://github.com/soundhar07/Own-Reconnaissance-Tools)
-
-Go through this github and give me a proper Readme.md file with project description and each functionality
-
-Here’s a **complete README.md** for your repository, combining all project details, description, and the functionalities:
-
-***
-
 # Own-Reconnaissance-Tools
 
 An advanced toolkit for network reconnaissance and scanning, developed as part of my COMP6841 Project. This project features multiple Python utilities for port scanning, banner grabbing, vulnerability lookup, ARP scanning, and subdomain discovery. Designed for hands-on learning and practical use in network security assessments.
